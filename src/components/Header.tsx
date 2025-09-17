@@ -71,8 +71,13 @@ const Header = () => {
             <Button 
               onClick={() => window.open('https://wa.me/5531993125919', '_blank')}
               variant="default"
-              className="bg-primary hover:bg-primary-dark text-primary-foreground transition-smooth"
+              className="bg-primary hover:bg-primary-dark text-primary-foreground transition-smooth flex items-center gap-2"
             >
+              <img 
+                src="/whatsapp-icon.webp" 
+                alt="WhatsApp" 
+                className="w-4 h-4 object-contain"
+              />
               WhatsApp
             </Button>
           </nav>
@@ -116,11 +121,16 @@ const Header = () => {
               >
                 Contato
               </button>
-              <Button 
+               <Button 
                 onClick={() => window.open('https://wa.me/5531993125919', '_blank')}
                 variant="default"
-                className="mt-4 bg-primary hover:bg-primary-dark text-primary-foreground transition-smooth"
+                className="mt-4 bg-primary hover:bg-primary-dark text-primary-foreground transition-smooth flex items-center gap-2"
               >
+                <img 
+                  src="/whatsapp-icon.webp" 
+                  alt="WhatsApp" 
+                  className="w-4 h-4 object-contain"
+                />
                 WhatsApp
               </Button>
             </nav>

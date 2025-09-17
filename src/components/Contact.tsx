@@ -41,13 +41,18 @@ const Contact = () => {
                       <div className="flex-1">
                         <h4 className="font-semibold text-card-foreground mb-2">WhatsApp</h4>
                         <p className="text-muted-foreground mb-3">(31) 99312-5919</p>
-                        <Button 
-                          size="sm"
-                          onClick={() => window.open('https://wa.me/5531993125919', '_blank')}
-                          className="bg-primary hover:bg-primary-dark text-primary-foreground transition-smooth"
-                        >
-                          Enviar mensagem
-                        </Button>
+                  <Button 
+                    size="sm"
+                    onClick={() => window.open('https://wa.me/5531993125919', '_blank')}
+                    className="bg-primary hover:bg-primary-dark text-primary-foreground transition-smooth flex items-center gap-2"
+                  >
+                    <img 
+                      src="/whatsapp-icon.webp" 
+                      alt="WhatsApp" 
+                      className="w-4 h-4 object-contain"
+                    />
+                    Enviar mensagem
+                  </Button>
                       </div>
                     </div>
                   </CardContent>
@@ -168,8 +173,13 @@ const Contact = () => {
                     <Button 
                       variant="secondary"
                       onClick={() => window.open('https://wa.me/5531993125919', '_blank')}
-                      className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 transition-smooth"
+                      className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 transition-smooth flex items-center gap-2"
                     >
+                      <img 
+                        src="/whatsapp-icon.webp" 
+                        alt="WhatsApp" 
+                        className="w-4 h-4 object-contain"
+                      />
                       Fazer pedido no WhatsApp
                     </Button>
                   </CardContent>

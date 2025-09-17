@@ -74,9 +74,14 @@ const Services = () => {
 
                   <Button 
                     variant="outline"
-                    className="w-full bg-background/50 border-primary/30 text-card-foreground hover:bg-primary/10 hover:border-primary transition-smooth"
+                    className="w-full bg-background/50 border-primary/30 text-card-foreground hover:bg-primary/10 hover:border-primary transition-smooth flex items-center gap-2"
                     onClick={() => window.open('https://wa.me/5531993125919', '_blank')}
                   >
+                    <img 
+                      src="/whatsapp-icon.webp" 
+                      alt="WhatsApp" 
+                      className="w-4 h-4 object-contain"
+                    />
                     Solicitar orçamento
                   </Button>
                 </CardContent>
@@ -98,8 +103,13 @@ const Services = () => {
                   size="lg"
                   variant="secondary"
                   onClick={() => window.open('https://wa.me/5531993125919', '_blank')}
-                  className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 px-6 py-4 md:px-8 md:py-6 text-base md:text-lg transition-smooth shadow-soft"
+                  className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 px-6 py-4 md:px-8 md:py-6 text-base md:text-lg transition-smooth shadow-soft flex items-center gap-2"
                 >
+                  <img 
+                    src="/whatsapp-icon.webp" 
+                    alt="WhatsApp" 
+                    className="w-5 h-5 object-contain"
+                  />
                   Fazer pedido no WhatsApp
                 </Button>
                 <Button 
