@@ -3,53 +3,53 @@ import { Heart, Sparkles } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section id="inicio" className="min-h-screen flex items-center gradient-hero relative overflow-hidden">
+    <section id="inicio" className="min-h-screen flex items-center gradient-hero relative overflow-hidden pt-20">
       {/* Background decorative elements */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-10 w-20 h-20 bg-accent rounded-full blur-xl"></div>
-        <div className="absolute top-40 right-20 w-32 h-32 bg-secondary rounded-full blur-2xl"></div>
-        <div className="absolute bottom-20 left-1/4 w-24 h-24 bg-primary rounded-full blur-xl"></div>
+        <div className="absolute top-20 left-4 md:left-10 w-16 h-16 md:w-20 md:h-20 bg-accent rounded-full blur-xl"></div>
+        <div className="absolute top-32 md:top-40 right-4 md:right-20 w-24 h-24 md:w-32 md:h-32 bg-secondary rounded-full blur-2xl"></div>
+        <div className="absolute bottom-20 left-1/4 w-20 h-20 md:w-24 md:h-24 bg-primary rounded-full blur-xl"></div>
       </div>
 
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
+      <div className="container mx-auto px-4 md:px-6 lg:px-8 relative z-10">
+        <div className="max-w-5xl mx-auto text-center">
           {/* Logo central */}
-          <div className="mb-8">
+          <div className="mb-6 md:mb-8">
             <img 
               src="/logo.jpg" 
               alt="Ateliê Dona Delas" 
-              className="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full shadow-elegant"
+              className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-44 lg:h-44 mx-auto rounded-full shadow-elegant"
             />
           </div>
 
           {/* H1 - Nome da empresa */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground mb-4 md:mb-6 leading-tight">
             Ateliê Dona Delas
           </h1>
 
           {/* H2 - Descrição da empresa */}
-          <h2 className="text-xl md:text-2xl lg:text-3xl text-muted-foreground mb-8 leading-relaxed">
+          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-muted-foreground mb-6 md:mb-8 leading-relaxed px-2 md:px-0">
             Unimos carinho, criatividade e dedicação para transformar o estilo dos pets em algo único e cheio de personalidade
           </h2>
 
           {/* Destaques */}
-          <div className="flex flex-wrap justify-center gap-4 mb-10">
-            <div className="flex items-center gap-2 bg-card/80 backdrop-blur-sm rounded-full px-4 py-2 shadow-soft">
-              <Heart className="w-5 h-5 text-secondary" />
-              <span className="text-sm font-medium text-card-foreground">Feito com amor</span>
+          <div className="flex flex-wrap justify-center gap-3 md:gap-4 mb-8 md:mb-10 px-2">
+            <div className="flex items-center gap-2 bg-card/80 backdrop-blur-sm rounded-full px-3 py-2 md:px-4 md:py-2 shadow-soft">
+              <Heart className="w-4 h-4 md:w-5 md:h-5 text-secondary" />
+              <span className="text-xs md:text-sm font-medium text-card-foreground">Feito com amor</span>
             </div>
-            <div className="flex items-center gap-2 bg-card/80 backdrop-blur-sm rounded-full px-4 py-2 shadow-soft">
-              <Sparkles className="w-5 h-5 text-accent" />
-              <span className="text-sm font-medium text-card-foreground">Qualidade premium</span>
+            <div className="flex items-center gap-2 bg-card/80 backdrop-blur-sm rounded-full px-3 py-2 md:px-4 md:py-2 shadow-soft">
+              <Sparkles className="w-4 h-4 md:w-5 md:h-5 text-accent" />
+              <span className="text-xs md:text-sm font-medium text-card-foreground">Qualidade premium</span>
             </div>
           </div>
 
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center px-4 sm:px-0">
             <Button 
               size="lg"
               onClick={() => window.open('https://wa.me/5531993125919', '_blank')}
-              className="bg-primary hover:bg-primary-dark text-primary-foreground px-8 py-6 text-lg transition-smooth shadow-soft hover:shadow-elegant"
+              className="w-full sm:w-auto bg-primary hover:bg-primary-dark text-primary-foreground px-6 py-4 md:px-8 md:py-6 text-base md:text-lg transition-smooth shadow-soft hover:shadow-elegant"
             >
               Faça seu pedido
             </Button>
@@ -67,7 +67,7 @@ const Hero = () => {
                   });
                 }
               }}
-              className="bg-background/10 border-primary/30 text-foreground hover:bg-primary/10 hover:border-primary px-8 py-6 text-lg transition-smooth backdrop-blur-sm"
+              className="w-full sm:w-auto bg-background/10 border-primary/30 text-foreground hover:bg-primary/10 hover:border-primary px-6 py-4 md:px-8 md:py-6 text-base md:text-lg transition-smooth backdrop-blur-sm"
             >
               Conheça nossos produtos
             </Button>

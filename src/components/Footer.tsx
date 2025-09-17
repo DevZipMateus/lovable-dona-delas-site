@@ -2,10 +2,10 @@ import { Heart, Instagram, Phone, Mail } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-primary text-primary-foreground py-12">
-      <div className="container mx-auto px-4">
+    <footer className="bg-primary text-primary-foreground py-8 md:py-12">
+      <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-6 md:mb-8">
             {/* Brand */}
             <div className="space-y-4">
               <div className="flex items-center gap-3">
@@ -68,14 +68,14 @@ const Footer = () => {
           </div>
 
           {/* Bottom */}
-          <div className="border-t border-primary-foreground/20 pt-8">
-            <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-              <p className="text-primary-foreground/80 text-sm">
+          <div className="border-t border-primary-foreground/20 pt-6 md:pt-8">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-3 md:gap-4 text-center md:text-left">
+              <p className="text-primary-foreground/80 text-xs md:text-sm">
                 © {new Date().getFullYear()} Ateliê Dona Delas. Todos os direitos reservados.
               </p>
-              <div className="flex items-center gap-2 text-primary-foreground/80 text-sm">
+              <div className="flex items-center gap-2 text-primary-foreground/80 text-xs md:text-sm">
                 <span>Feito com</span>
-                <Heart className="w-4 h-4 text-secondary" />
+                <Heart className="w-3 h-3 md:w-4 md:h-4 text-secondary" />
                 <span>para pets especiais</span>
               </div>
             </div>

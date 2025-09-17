@@ -4,20 +4,20 @@ import { MapPin, Phone, Mail, Clock, Instagram } from "lucide-react";
 
 const Contact = () => {
   return (
-    <section id="contato" className="py-20 bg-card">
-      <div className="container mx-auto px-4">
+    <section id="contato" className="py-12 md:py-16 lg:py-20 bg-card">
+      <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-card-foreground mb-6">
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-card-foreground mb-4 md:mb-6">
               Entre em contato
             </h2>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            <p className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-2 md:px-0">
               Estamos prontos para atender você e seu pet com todo o carinho e dedicação
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
             {/* Contact Info */}
             <div className="space-y-8">
               <div>

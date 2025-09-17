@@ -32,13 +32,13 @@ const Header = () => {
     <header className={`fixed top-0 left-0 right-0 z-50 transition-smooth ${
       isScrolled ? 'bg-background/95 backdrop-blur-md shadow-soft' : 'bg-transparent'
     }`}>
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
+      <div className="container mx-auto px-4 md:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
-            <img src="/logo.jpg" alt="Ateliê Dona Delas" className="h-12 w-12 rounded-full shadow-soft" />
+          <div className="flex items-center space-x-2 md:space-x-3">
+            <img src="/logo.jpg" alt="Ateliê Dona Delas" className="h-10 w-10 md:h-12 md:w-12 rounded-full shadow-soft" />
             <div>
-              <h2 className="text-xl font-bold text-foreground">Ateliê Dona Delas</h2>
+              <h2 className="text-lg md:text-xl font-bold text-foreground">Ateliê Dona Delas</h2>
             </div>
           </div>
 

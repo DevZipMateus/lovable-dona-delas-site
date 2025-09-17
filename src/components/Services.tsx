@@ -31,21 +31,21 @@ const Services = () => {
   ];
 
   return (
-    <section id="servicos" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
+    <section id="servicos" className="py-12 md:py-16 lg:py-20 bg-background">
+      <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 md:mb-6">
               Nossos serviços
             </h2>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            <p className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-2 md:px-0">
               Fabricamos e distribuímos acessórios únicos para pets, com qualidade premium e designs exclusivos
             </p>
           </div>
 
           {/* Services grid */}
-          <div className="grid md:grid-cols-2 gap-8 mb-16">
+          <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-12 md:mb-16">
             {services.map((service, index) => (
               <Card key={index} className="group hover:shadow-elegant transition-smooth shadow-soft bg-card border-border/50">
                 <CardHeader className="pb-4">
@@ -86,19 +86,19 @@ const Services = () => {
 
           {/* CTA Section */}
           <Card className="bg-gradient-primary text-primary-foreground shadow-elegant">
-            <CardContent className="p-8 md:p-12 text-center">
-              <h3 className="text-2xl md:text-3xl font-bold mb-4">
+            <CardContent className="p-6 md:p-8 lg:p-12 text-center">
+              <h3 className="text-xl md:text-2xl lg:text-3xl font-bold mb-3 md:mb-4">
                 Pronto para deixar seu pet ainda mais estiloso?
               </h3>
-              <p className="text-lg mb-8 opacity-90 max-w-2xl mx-auto">
+              <p className="text-sm md:text-base lg:text-lg mb-6 md:mb-8 opacity-90 max-w-2xl mx-auto leading-relaxed">
                 Entre em contato conosco e descubra como podemos transformar o visual do seu pet com nossos acessórios únicos e de alta qualidade.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
                 <Button 
                   size="lg"
                   variant="secondary"
                   onClick={() => window.open('https://wa.me/5531993125919', '_blank')}
-                  className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 px-8 py-6 text-lg transition-smooth shadow-soft"
+                  className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 px-6 py-4 md:px-8 md:py-6 text-base md:text-lg transition-smooth shadow-soft"
                 >
                   Fazer pedido no WhatsApp
                 </Button>
@@ -106,7 +106,7 @@ const Services = () => {
                   size="lg"
                   variant="outline"
                   onClick={() => window.open('https://www.instagram.com/ateliedonadelas?igsh=MTV0MHQzNGF3em1tMg==&utm_source=ig_contact_invite', '_blank')}
-                  className="bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/20 hover:border-primary-foreground px-8 py-6 text-lg transition-smooth backdrop-blur-sm"
+                  className="bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/20 hover:border-primary-foreground px-6 py-4 md:px-8 md:py-6 text-base md:text-lg transition-smooth backdrop-blur-sm"
                 >
                   Ver no Instagram
                 </Button>
