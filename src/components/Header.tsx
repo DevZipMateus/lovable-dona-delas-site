@@ -1,0 +1,134 @@
+import { useState, useEffect } from "react";
+import { Button } from "@/components/ui/button";
+import { Menu, X } from "lucide-react";
+
+const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const headerHeight = 80;
+      const elementPosition = element.offsetTop - headerHeight;
+      window.scrollTo({
+        top: elementPosition,
+        behavior: 'smooth'
+      });
+    }
+    setIsMenuOpen(false);
+  };
+
+  return (
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-smooth ${
+      isScrolled ? 'bg-background/95 backdrop-blur-md shadow-soft' : 'bg-transparent'
+    }`}>
+      <div className="container mx-auto px-4">
+        <div className="flex items-center justify-between h-20">
+          {/* Logo */}
+          <div className="flex items-center space-x-3">
+            <img src="/logo.jpg" alt="Ateliê Dona Delas" className="h-12 w-12 rounded-full shadow-soft" />
+            <div>
+              <h2 className="text-xl font-bold text-foreground">Ateliê Dona Delas</h2>
+            </div>
+          </div>
+
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center space-x-8">
+            <button 
+              onClick={() => scrollToSection('inicio')}
+              className="text-foreground hover:text-primary transition-smooth font-medium"
+            >
+              Início
+            </button>
+            <button 
+              onClick={() => scrollToSection('sobre')}
+              className="text-foreground hover:text-primary transition-smooth font-medium"
+            >
+              Sobre
+            </button>
+            <button 
+              onClick={() => scrollToSection('servicos')}
+              className="text-foreground hover:text-primary transition-smooth font-medium"
+            >
+              Serviços
+            </button>
+            <button 
+              onClick={() => scrollToSection('contato')}
+              className="text-foreground hover:text-primary transition-smooth font-medium"
+            >
+              Contato
+            </button>
+            <Button 
+              onClick={() => window.open('https://wa.me/5531993125919', '_blank')}
+              variant="default"
+              className="bg-primary hover:bg-primary-dark text-primary-foreground transition-smooth"
+            >
+              WhatsApp
+            </Button>
+          </nav>
+
+          {/* Mobile menu button */}
+          <Button
+            variant="ghost"
+            size="icon"
+            className="md:hidden"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </Button>
+        </div>
+
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <div className="md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-md border-t border-border shadow-soft">
+            <nav className="flex flex-col space-y-1 p-4">
+              <button 
+                onClick={() => scrollToSection('inicio')}
+                className="text-left py-3 px-2 text-foreground hover:text-primary transition-smooth font-medium"
+              >
+                Início
+              </button>
+              <button 
+                onClick={() => scrollToSection('sobre')}
+                className="text-left py-3 px-2 text-foreground hover:text-primary transition-smooth font-medium"
+              >
+                Sobre
+              </button>
+              <button 
+                onClick={() => scrollToSection('servicos')}
+                className="text-left py-3 px-2 text-foreground hover:text-primary transition-smooth font-medium"
+              >
+                Serviços
+              </button>
+              <button 
+                onClick={() => scrollToSection('contato')}
+                className="text-left py-3 px-2 text-foreground hover:text-primary transition-smooth font-medium"
+              >
+                Contato
+              </button>
+              <Button 
+                onClick={() => window.open('https://wa.me/5531993125919', '_blank')}
+                variant="default"
+                className="mt-4 bg-primary hover:bg-primary-dark text-primary-foreground transition-smooth"
+              >
+                WhatsApp
+              </Button>
+            </nav>
+          </div>
+        )}
+      </div>
+    </header>
+  );
+};
+
+export default Header;
