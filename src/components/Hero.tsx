@@ -1,14 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Heart, Sparkles } from "lucide-react";
-
 const Hero = () => {
-  return (
-    <section id="inicio" className="min-h-screen flex items-center relative overflow-hidden pt-20">
+  return <section id="inicio" className="min-h-screen flex items-center relative overflow-hidden pt-20">
       {/* Background image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: 'url(/hero-background.jpg)' }}
-      />
+      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
+      backgroundImage: 'url(/hero-background.jpg)'
+    }} />
       
       {/* Background overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/80 via-secondary/70 to-accent/60"></div>
@@ -24,11 +21,7 @@ const Hero = () => {
         <div className="max-w-5xl mx-auto text-center">
           {/* Logo central */}
           <div className="mb-6 md:mb-8">
-            <img 
-              src="/logo.jpg" 
-              alt="Ateliê Dona Delas" 
-              className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-44 lg:h-44 mx-auto rounded-full shadow-elegant"
-            />
+            <img src="/logo.jpg" alt="Ateliê Dona Delas" className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-44 lg:h-44 mx-auto rounded-full shadow-elegant" />
           </div>
 
           {/* H1 - Nome da empresa */}
@@ -37,7 +30,7 @@ const Hero = () => {
           </h1>
 
           {/* H2 - Descrição da empresa */}
-          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-muted-foreground mb-6 md:mb-8 leading-relaxed px-2 md:px-0">
+          <h2 className="text-lg sm:text-xl md:text-2xl mb-6 md:mb-8 leading-relaxed px-2 md:px-0 text-zinc-50 lg:text-4xl">
             Unimos carinho, criatividade e dedicação para transformar o estilo dos pets em algo único e cheio de personalidade
           </h2>
 
@@ -55,36 +48,25 @@ const Hero = () => {
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center px-4 sm:px-0">
-            <Button 
-              size="lg"
-              onClick={() => window.open('https://wa.me/5531993125919', '_blank')}
-              className="w-full sm:w-auto bg-primary hover:bg-primary-dark text-primary-foreground px-6 py-4 md:px-8 md:py-6 text-base md:text-lg transition-smooth shadow-soft hover:shadow-elegant"
-            >
+            <Button size="lg" onClick={() => window.open('https://wa.me/5531993125919', '_blank')} className="w-full sm:w-auto bg-primary hover:bg-primary-dark text-primary-foreground px-6 py-4 md:px-8 md:py-6 text-base md:text-lg transition-smooth shadow-soft hover:shadow-elegant">
               Faça seu pedido
             </Button>
-            <Button 
-              size="lg"
-              variant="outline"
-              onClick={() => {
-                const element = document.getElementById('servicos');
-                if (element) {
-                  const headerHeight = 80;
-                  const elementPosition = element.offsetTop - headerHeight;
-                  window.scrollTo({
-                    top: elementPosition,
-                    behavior: 'smooth'
-                  });
-                }
-              }}
-              className="w-full sm:w-auto bg-background/10 border-primary/30 text-foreground hover:bg-primary/10 hover:border-primary px-6 py-4 md:px-8 md:py-6 text-base md:text-lg transition-smooth backdrop-blur-sm"
-            >
+            <Button size="lg" variant="outline" onClick={() => {
+            const element = document.getElementById('servicos');
+            if (element) {
+              const headerHeight = 80;
+              const elementPosition = element.offsetTop - headerHeight;
+              window.scrollTo({
+                top: elementPosition,
+                behavior: 'smooth'
+              });
+            }
+          }} className="w-full sm:w-auto bg-background/10 border-primary/30 text-foreground hover:bg-primary/10 hover:border-primary px-6 py-4 md:px-8 md:py-6 text-base md:text-lg transition-smooth backdrop-blur-sm">
               Conheça nossos produtos
             </Button>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
