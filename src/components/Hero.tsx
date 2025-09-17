@@ -3,7 +3,16 @@ import { Heart, Sparkles } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section id="inicio" className="min-h-screen flex items-center gradient-hero relative overflow-hidden pt-20">
+    <section id="inicio" className="min-h-screen flex items-center relative overflow-hidden pt-20">
+      {/* Background image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: 'url(/hero-background.jpg)' }}
+      />
+      
+      {/* Background overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/80 via-secondary/70 to-accent/60"></div>
+      
       {/* Background decorative elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-4 md:left-10 w-16 h-16 md:w-20 md:h-20 bg-accent rounded-full blur-xl"></div>
