@@ -30,7 +30,7 @@ const Hero = () => {
           </h1>
 
           {/* H2 - Descrição da empresa */}
-          <h2 className="text-lg sm:text-xl md:text-2xl mb-6 md:mb-8 leading-relaxed px-2 md:px-0 text-zinc-50 lg:text-4xl">
+          <h2 className="text-lg sm:text-xl md:text-2xl mb-6 md:mb-8 leading-relaxed px-2 md:px-0 text-black lg:text-4xl">
             Unimos carinho, criatividade e dedicação para transformar o estilo dos pets em algo único e cheio de personalidade
           </h2>
 
