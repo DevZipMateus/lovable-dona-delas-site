@@ -33,11 +33,6 @@ const About = () => {
     },
     {
       type: "image",
-      src: "/products/cachorro-laco.jpg",
-      alt: "Cachorro golden usando laço rosa - Ateliê Dona Delas"
-    },
-    {
-      type: "image",
       src: "/products/lacos-coloridos.jpg",
       alt: "Laços coloridos variados para pets"
     },
