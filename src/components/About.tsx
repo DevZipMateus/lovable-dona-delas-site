@@ -34,6 +34,30 @@ const About = () => {
     {
       src: "/products/lacos-coloridos.jpg",
       alt: "Laços coloridos variados para pets"
+    },
+    {
+      src: "/products/laco-coral.jpg",
+      alt: "Laço coral elegante para pets"
+    },
+    {
+      src: "/products/gravatas-decoradas.jpg",
+      alt: "Gravatas decoradas com temas variados para pets"
+    },
+    {
+      src: "/products/lacos-amarelos.jpg",
+      alt: "Laços amarelos decorados com detalhes brilhantes"
+    },
+    {
+      src: "/products/lacos-marca.jpg",
+      alt: "Laços Ateliê Dona Delas com detalhes especiais"
+    },
+    {
+      src: "/products/bandanas-tecidos.jpg",
+      alt: "Bandanas e tecidos coloridos para pets"
+    },
+    {
+      src: "/products/gravatas-borboleta.jpg",
+      alt: "Gravatas borboleta coloridas para pets"
     }
   ];
 
