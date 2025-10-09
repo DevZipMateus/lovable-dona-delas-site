@@ -74,17 +74,58 @@ const About = () => {
               </div>
             </div>
 
-            {/* Image placeholder */}
+            {/* Products Gallery */}
             <div className="relative">
-              <Card className="overflow-hidden shadow-elegant">
+              <div className="grid grid-cols-2 gap-3 md:gap-4">
+                <Card className="overflow-hidden shadow-soft hover:shadow-elegant transition-smooth">
+                  <CardContent className="p-0">
+                    <img 
+                      src="/products/coleiras-frutas.jpg" 
+                      alt="Coleiras decoradas com temas de frutas para pets" 
+                      className="w-full h-full object-cover aspect-square"
+                    />
+                  </CardContent>
+                </Card>
+                
+                <Card className="overflow-hidden shadow-soft hover:shadow-elegant transition-smooth">
+                  <CardContent className="p-0">
+                    <img 
+                      src="/products/saches-personalizados.jpg" 
+                      alt="Sachês personalizados coloridos para pets" 
+                      className="w-full h-full object-cover aspect-square"
+                    />
+                  </CardContent>
+                </Card>
+                
+                <Card className="overflow-hidden shadow-soft hover:shadow-elegant transition-smooth">
+                  <CardContent className="p-0">
+                    <img 
+                      src="/products/tiaras-asas.jpg" 
+                      alt="Tiaras decorativas com asas para pets" 
+                      className="w-full h-full object-cover aspect-square"
+                    />
+                  </CardContent>
+                </Card>
+                
+                <Card className="overflow-hidden shadow-soft hover:shadow-elegant transition-smooth">
+                  <CardContent className="p-0">
+                    <img 
+                      src="/products/lacos-diversos.jpg" 
+                      alt="Coleção de laços diversos para pets" 
+                      className="w-full h-full object-cover aspect-square"
+                    />
+                  </CardContent>
+                </Card>
+              </div>
+              
+              {/* Featured product - Cachorro com laço */}
+              <Card className="overflow-hidden shadow-elegant mt-3 md:mt-4">
                 <CardContent className="p-0">
-                  <div className="aspect-square bg-gradient-accent flex items-center justify-center">
-                    <div className="text-center text-accent-foreground">
-                      <Sparkles className="w-16 h-16 mx-auto mb-4 opacity-60" />
-                      <p className="text-lg font-medium">Imagem dos produtos</p>
-                      <p className="text-sm opacity-80">Acessórios únicos para pets</p>
-                    </div>
-                  </div>
+                  <img 
+                    src="/products/cachorro-laco.jpg" 
+                    alt="Cachorro golden usando laço rosa - Ateliê Dona Delas" 
+                    className="w-full h-full object-cover aspect-video"
+                  />
                 </CardContent>
               </Card>
             </div>
