@@ -20,7 +20,7 @@ const Services = () => {
       icon: <Palette className="w-8 h-8" />,
       title: "Bandanas personalizadas",
       description: "Bandanas únicas com estampas exclusivas. Ideais para o dia a dia ou eventos especiais do seu pet.",
-      features: ["Estampas exclusivas", "Tecidos macios", "Lavável", "Resistente"]
+      features: ["Estampas variadas", "Tecidos macios", "Lavável", "Resistente"]
     },
     {
       icon: <Sparkles className="w-8 h-8" />,
