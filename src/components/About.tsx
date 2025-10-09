@@ -54,6 +54,18 @@ const About = () => {
     {
       src: "/products/gravatas-borboleta.jpg",
       alt: "Gravatas borboleta coloridas para pets"
+    },
+    {
+      src: "/products/coleiras-lacos-renda.jpg",
+      alt: "Coleiras com laços e renda delicada para pets"
+    },
+    {
+      src: "/products/atelie-trabalho.jpg",
+      alt: "Bastidores do ateliê - produção artesanal de acessórios"
+    },
+    {
+      src: "/products/gravatas-cachorros.jpg",
+      alt: "Gravatas personalizadas com estampas de cachorros"
     }
   ];
 
