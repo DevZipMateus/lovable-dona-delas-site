@@ -98,7 +98,7 @@ const About = () => {
               Sobre nós
             </h2>
             <p className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-2 md:px-0">
-              Anos de experiência e amor pelo que fazemos, transformando pets em verdadeiras estrelas
+              Mais de 10 anos de experiência e amor pelo que fazemos, transformando pets em verdadeiras estrelas
             </p>
           </div>
 
