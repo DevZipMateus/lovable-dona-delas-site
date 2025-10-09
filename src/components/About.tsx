@@ -66,6 +66,10 @@ const About = () => {
     {
       src: "/products/gravatas-cachorros.jpg",
       alt: "Gravatas personalizadas com estampas de cachorros"
+    },
+    {
+      src: "/products/laco-coral.jpg",
+      alt: "Laço coral elegante para pets"
     }
   ];
 
