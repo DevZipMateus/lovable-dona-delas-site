@@ -36,10 +36,6 @@ const About = () => {
       alt: "Laços coloridos variados para pets"
     },
     {
-      src: "/products/laco-coral.jpg",
-      alt: "Laço coral elegante para pets"
-    },
-    {
       src: "/products/gravatas-decoradas.jpg",
       alt: "Gravatas decoradas com temas variados para pets"
     },
