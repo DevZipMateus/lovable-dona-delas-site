@@ -12,64 +12,84 @@ import Autoplay from "embla-carousel-autoplay";
 const About = () => {
   const products = [
     {
+      type: "image",
       src: "/products/coleiras-frutas.jpg",
       alt: "Coleiras decoradas com temas de frutas para pets"
     },
     {
+      type: "image",
       src: "/products/saches-personalizados.jpg",
       alt: "Sachês personalizados coloridos para pets"
     },
     {
+      type: "image",
       src: "/products/tiaras-asas.jpg",
       alt: "Tiaras decorativas com asas para pets"
     },
     {
+      type: "image",
       src: "/products/lacos-diversos.jpg",
       alt: "Coleção de laços diversos para pets"
     },
     {
+      type: "image",
       src: "/products/cachorro-laco.jpg",
       alt: "Cachorro golden usando laço rosa - Ateliê Dona Delas"
     },
     {
+      type: "image",
       src: "/products/lacos-coloridos.jpg",
       alt: "Laços coloridos variados para pets"
     },
     {
+      type: "image",
       src: "/products/gravatas-decoradas.jpg",
       alt: "Gravatas decoradas com temas variados para pets"
     },
     {
+      type: "image",
       src: "/products/lacos-amarelos.jpg",
       alt: "Laços amarelos decorados com detalhes brilhantes"
     },
     {
+      type: "image",
       src: "/products/lacos-marca.jpg",
       alt: "Laços Ateliê Dona Delas com detalhes especiais"
     },
     {
+      type: "image",
       src: "/products/bandanas-tecidos.jpg",
       alt: "Bandanas e tecidos coloridos para pets"
     },
     {
+      type: "image",
       src: "/products/gravatas-borboleta.jpg",
       alt: "Gravatas borboleta coloridas para pets"
     },
     {
+      type: "image",
       src: "/products/coleiras-lacos-renda.jpg",
       alt: "Coleiras com laços e renda delicada para pets"
     },
     {
+      type: "image",
       src: "/products/atelie-trabalho.jpg",
       alt: "Bastidores do ateliê - produção artesanal de acessórios"
     },
     {
+      type: "image",
       src: "/products/gravatas-cachorros.jpg",
       alt: "Gravatas personalizadas com estampas de cachorros"
     },
     {
+      type: "image",
       src: "/products/laco-coral.jpg",
       alt: "Laço coral elegante para pets"
+    },
+    {
+      type: "video",
+      src: "/products/video-produtos.mp4",
+      alt: "Vídeo mostrando produtos do Ateliê Dona Delas"
     }
   ];
 
@@ -167,11 +187,22 @@ const About = () => {
                       <div className="p-1">
                         <Card className="overflow-hidden shadow-soft hover:shadow-elegant transition-smooth">
                           <CardContent className="p-0">
-                            <img
-                              src={product.src}
-                              alt={product.alt}
-                              className="w-full h-full object-cover aspect-square"
-                            />
+                            {product.type === "video" ? (
+                              <video
+                                src={product.src}
+                                className="w-full h-full object-cover aspect-square"
+                                autoPlay
+                                loop
+                                muted
+                                playsInline
+                              />
+                            ) : (
+                              <img
+                                src={product.src}
+                                alt={product.alt}
+                                className="w-full h-full object-cover aspect-square"
+                              />
+                            )}
                           </CardContent>
                         </Card>
                       </div>
