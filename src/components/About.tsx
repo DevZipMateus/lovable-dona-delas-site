@@ -1,7 +1,42 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Award, Heart, Sparkles, Star } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 const About = () => {
+  const products = [
+    {
+      src: "/products/coleiras-frutas.jpg",
+      alt: "Coleiras decoradas com temas de frutas para pets"
+    },
+    {
+      src: "/products/saches-personalizados.jpg",
+      alt: "Sachês personalizados coloridos para pets"
+    },
+    {
+      src: "/products/tiaras-asas.jpg",
+      alt: "Tiaras decorativas com asas para pets"
+    },
+    {
+      src: "/products/lacos-diversos.jpg",
+      alt: "Coleção de laços diversos para pets"
+    },
+    {
+      src: "/products/cachorro-laco.jpg",
+      alt: "Cachorro golden usando laço rosa - Ateliê Dona Delas"
+    },
+    {
+      src: "/products/lacos-coloridos.jpg",
+      alt: "Laços coloridos variados para pets"
+    }
+  ];
+
   return (
     <section id="sobre" className="py-12 md:py-16 lg:py-20 bg-card">
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
@@ -74,60 +109,42 @@ const About = () => {
               </div>
             </div>
 
-            {/* Products Gallery */}
-            <div className="relative">
-              <div className="grid grid-cols-2 gap-3 md:gap-4">
-                <Card className="overflow-hidden shadow-soft hover:shadow-elegant transition-smooth">
-                  <CardContent className="p-0">
-                    <img 
-                      src="/products/coleiras-frutas.jpg" 
-                      alt="Coleiras decoradas com temas de frutas para pets" 
-                      className="w-full h-full object-cover aspect-square"
-                    />
-                  </CardContent>
-                </Card>
-                
-                <Card className="overflow-hidden shadow-soft hover:shadow-elegant transition-smooth">
-                  <CardContent className="p-0">
-                    <img 
-                      src="/products/saches-personalizados.jpg" 
-                      alt="Sachês personalizados coloridos para pets" 
-                      className="w-full h-full object-cover aspect-square"
-                    />
-                  </CardContent>
-                </Card>
-                
-                <Card className="overflow-hidden shadow-soft hover:shadow-elegant transition-smooth">
-                  <CardContent className="p-0">
-                    <img 
-                      src="/products/tiaras-asas.jpg" 
-                      alt="Tiaras decorativas com asas para pets" 
-                      className="w-full h-full object-cover aspect-square"
-                    />
-                  </CardContent>
-                </Card>
-                
-                <Card className="overflow-hidden shadow-soft hover:shadow-elegant transition-smooth">
-                  <CardContent className="p-0">
-                    <img 
-                      src="/products/lacos-diversos.jpg" 
-                      alt="Coleção de laços diversos para pets" 
-                      className="w-full h-full object-cover aspect-square"
-                    />
-                  </CardContent>
-                </Card>
-              </div>
-              
-              {/* Featured product - Cachorro com laço */}
-              <Card className="overflow-hidden shadow-elegant mt-3 md:mt-4">
-                <CardContent className="p-0">
-                  <img 
-                    src="/products/cachorro-laco.jpg" 
-                    alt="Cachorro golden usando laço rosa - Ateliê Dona Delas" 
-                    className="w-full h-full object-cover aspect-video"
-                  />
-                </CardContent>
-              </Card>
+            {/* Products Carousel */}
+            <div className="relative w-full">
+              <Carousel
+                opts={{
+                  align: "start",
+                  loop: true,
+                }}
+                plugins={[
+                  Autoplay({
+                    delay: 3000,
+                    stopOnInteraction: false,
+                    stopOnMouseEnter: false,
+                  }),
+                ]}
+                className="w-full"
+              >
+                <CarouselContent>
+                  {products.map((product, index) => (
+                    <CarouselItem key={index} className="md:basis-1/2">
+                      <div className="p-1">
+                        <Card className="overflow-hidden shadow-soft hover:shadow-elegant transition-smooth">
+                          <CardContent className="p-0">
+                            <img
+                              src={product.src}
+                              alt={product.alt}
+                              className="w-full h-full object-cover aspect-square"
+                            />
+                          </CardContent>
+                        </Card>
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious className="left-2" />
+                <CarouselNext className="right-2" />
+              </Carousel>
             </div>
           </div>
 
