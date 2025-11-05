@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,14 +19,32 @@ const Header = () => {
   }, []);
 
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      const headerHeight = 80;
-      const elementPosition = element.offsetTop - headerHeight;
-      window.scrollTo({
-        top: elementPosition,
-        behavior: 'smooth'
-      });
+    // Se não estiver na página principal, navegar primeiro
+    if (location.pathname !== '/') {
+      navigate('/');
+      // Esperar um momento para a página carregar antes de fazer scroll
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const headerHeight = 80;
+          const elementPosition = element.offsetTop - headerHeight;
+          window.scrollTo({
+            top: elementPosition,
+            behavior: 'smooth'
+          });
+        }
+      }, 100);
+    } else {
+      // Já está na página principal, fazer scroll direto
+      const element = document.getElementById(sectionId);
+      if (element) {
+        const headerHeight = 80;
+        const elementPosition = element.offsetTop - headerHeight;
+        window.scrollTo({
+          top: elementPosition,
+          behavior: 'smooth'
+        });
+      }
     }
     setIsMenuOpen(false);
   };
@@ -36,7 +56,7 @@ const Header = () => {
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <div className="flex items-center space-x-2 md:space-x-3">
+          <div className="flex items-center space-x-2 md:space-x-3 cursor-pointer" onClick={() => navigate('/')}>
             <img src="/logo.jpg" alt="Ateliê Dona Delas" className="h-10 w-10 md:h-12 md:w-12 rounded-full shadow-soft" />
             <div>
               <h2 className="text-lg md:text-xl font-bold text-foreground">Ateliê Dona Delas</h2>
