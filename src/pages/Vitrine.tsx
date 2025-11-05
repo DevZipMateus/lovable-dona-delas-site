@@ -27,6 +27,8 @@ const Vitrine = () => {
           title="Demonstração de Vitrine"
         />
       </main>
+      {/* Rodapé MonteSite - Atualização Automática */}
+      <div id="montesite-footer-badge" className="w-full" style={{ height: '63px' }}></div>
     </div>
   );
 };
