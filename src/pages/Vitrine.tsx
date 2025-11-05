@@ -14,7 +14,19 @@ const Vitrine = () => {
     calculateHeight();
     window.addEventListener('resize', calculateHeight);
     
-    return () => window.removeEventListener('resize', calculateHeight);
+    // Carregar o script do badge MonteSite
+    const script = document.createElement('script');
+    script.src = 'https://vaabpicspdbolvutnscp.supabase.co/functions/v1/get-footer-iframe';
+    script.async = true;
+    document.body.appendChild(script);
+    
+    return () => {
+      window.removeEventListener('resize', calculateHeight);
+      // Limpar o script quando o componente desmontar
+      if (script.parentNode) {
+        script.parentNode.removeChild(script);
+      }
+    };
   }, []);
 
   return (
@@ -28,7 +40,7 @@ const Vitrine = () => {
         />
       </main>
       {/* Rodapé MonteSite - Atualização Automática */}
-      <div id="montesite-footer-badge" className="w-full" style={{ height: '63px' }}></div>
+      <div id="montesite-footer-badge"></div>
     </div>
   );
 };
