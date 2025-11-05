@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -62,6 +63,12 @@ const Header = () => {
             >
               Serviços
             </button>
+            <Link 
+              to="/vitrine"
+              className="text-foreground hover:text-primary transition-smooth font-medium"
+            >
+              Vitrine
+            </Link>
             <button 
               onClick={() => scrollToSection('contato')}
               className="text-foreground hover:text-primary transition-smooth font-medium"
@@ -115,6 +122,13 @@ const Header = () => {
               >
                 Serviços
               </button>
+              <Link 
+                to="/vitrine"
+                onClick={() => setIsMenuOpen(false)}
+                className="text-left py-3 px-2 text-foreground hover:text-primary transition-smooth font-medium"
+              >
+                Vitrine
+              </Link>
               <button 
                 onClick={() => scrollToSection('contato')}
                 className="text-left py-3 px-2 text-foreground hover:text-primary transition-smooth font-medium"

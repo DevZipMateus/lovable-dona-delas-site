@@ -1,6 +1,9 @@
 import { Button } from "@/components/ui/button";
-import { Heart, Sparkles } from "lucide-react";
+import { Heart, Sparkles, ShoppingBag } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 const Hero = () => {
+  const navigate = useNavigate();
+  
   return <section id="inicio" className="min-h-screen flex items-center relative overflow-hidden pt-20">
       {/* Background image */}
       <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
@@ -48,6 +51,10 @@ const Hero = () => {
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center px-4 sm:px-0">
+            <Button size="lg" onClick={() => navigate('/vitrine')} className="w-full sm:w-auto bg-secondary hover:bg-secondary/90 text-secondary-foreground px-6 py-4 md:px-8 md:py-6 text-base md:text-lg transition-smooth shadow-soft hover:shadow-elegant flex items-center gap-2">
+              <ShoppingBag className="w-5 h-5" />
+              Ver Vitrine
+            </Button>
             <Button size="lg" onClick={() => window.open('https://wa.me/5531993125919', '_blank')} className="w-full sm:w-auto bg-primary hover:bg-primary-dark text-primary-foreground px-6 py-4 md:px-8 md:py-6 text-base md:text-lg transition-smooth shadow-soft hover:shadow-elegant">
               Faça seu pedido
             </Button>
