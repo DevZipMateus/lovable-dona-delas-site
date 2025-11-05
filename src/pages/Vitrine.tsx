@@ -14,6 +14,9 @@ const Vitrine = () => {
     calculateHeight();
     window.addEventListener('resize', calculateHeight);
     
+    // Travar scroll da página
+    document.body.style.overflow = 'hidden';
+    
     // Carregar o script do badge MonteSite
     const script = document.createElement('script');
     script.src = 'https://vaabpicspdbolvutnscp.supabase.co/functions/v1/get-footer-iframe';
@@ -22,6 +25,8 @@ const Vitrine = () => {
     
     return () => {
       window.removeEventListener('resize', calculateHeight);
+      // Restaurar scroll quando sair da página
+      document.body.style.overflow = 'auto';
       // Limpar o script quando o componente desmontar
       if (script.parentNode) {
         script.parentNode.removeChild(script);
