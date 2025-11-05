@@ -37,7 +37,7 @@ const Vitrine = () => {
   return (
     <div className="h-screen overflow-hidden flex flex-col">
       <Header />
-      <main className="flex-1 w-full" style={{ height: `${iframeHeight}px` }}>
+      <main className="flex-1 w-full pt-20" style={{ height: `${iframeHeight}px` }}>
         <iframe 
           src="https://biancaastropetmgcombr.egestor.com.br/vitrine/" 
           style={{ width: '100%', height: '100%', border: 'none' }}
