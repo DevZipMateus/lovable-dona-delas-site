@@ -39,7 +39,7 @@ const Vitrine = () => {
       <Header />
       <main className="flex-1 w-full pt-20" style={{ height: `${iframeHeight}px` }}>
         <iframe 
-          src="https://biancaastropetmgcombr.egestor.com.br/vitrine/" 
+          src="https://ateliedonadelas.egestor.com.br/vitrine/" 
           style={{ width: '100%', height: '100%', border: 'none' }}
           title="Demonstração de Vitrine"
         />
